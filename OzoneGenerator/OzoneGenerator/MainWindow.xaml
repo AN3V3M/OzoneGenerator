@@ -1,0 +1,21 @@
+﻿<Window x:Class="OzoneGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ózon Generátor" Height="700" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Name="NextDayButton" Content="Nap léptetése" Click="NextDayButton_Click" Margin="5"/>
+            <Button Name="ResetButton" Content="Törlés" Click="ResetButton_Click" Margin="5"/>
+        </StackPanel>
+
+        <UniformGrid Name="OzoneGrid" Grid.Row="1" Columns="27" Rows="27" Margin="10"/>
+
+        <TextBlock Name="StatusText" Grid.Row="2" HorizontalAlignment="Center" Margin="10"/>
+    </Grid>
+</Window>
